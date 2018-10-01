@@ -1,15 +1,130 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller contentMode="scaleAspectFit" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Calculator_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="left" text="0" textAlignment="right" id="jo5-bR-MFM">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <group width="1" height="30" alignment="center" id="XqY-gR-cpN">
+                            <items>
+                                <button width="35" height="30" alignment="left" title="1" id="Tgr-aj-lML">
+                                    <connections>
+                                        <action selector="oneBtn" destination="AgC-eL-Hgc" id="AbR-kh-y7B"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="2" id="2QE-4T-RfF">
+                                    <connections>
+                                        <action selector="twoBtn" destination="AgC-eL-Hgc" id="Lu3-9d-wfY"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="3" id="V9S-kv-ERW">
+                                    <connections>
+                                        <action selector="threeBtn" destination="AgC-eL-Hgc" id="FrN-nT-WQC"/>
+                                    </connections>
+                                </button>
+                                <button width="30" height="30" alignment="right" title="/" id="gWV-QP-FHc">
+                                    <connections>
+                                        <action selector="divideBtn" destination="AgC-eL-Hgc" id="3CD-eL-fhh"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" id="89z-gf-qtS">
+                            <items>
+                                <button width="35" height="30" alignment="left" title="4" id="n10-bk-WBP">
+                                    <connections>
+                                        <action selector="fourBtn" destination="AgC-eL-Hgc" id="6X8-yj-0DC"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="5" id="lLK-m9-Yre">
+                                    <connections>
+                                        <action selector="fiveBtn" destination="AgC-eL-Hgc" id="Zd1-w4-gL6"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="6" id="kFa-LB-9GT">
+                                    <connections>
+                                        <action selector="sixBtn" destination="AgC-eL-Hgc" id="Jz6-p5-4L3"/>
+                                    </connections>
+                                </button>
+                                <button width="30" height="30" alignment="right" title="x" id="eoW-sz-utA">
+                                    <connections>
+                                        <action selector="multiplyBtn" destination="AgC-eL-Hgc" id="aLY-gS-N9K"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" id="9L2-Ui-HCj">
+                            <items>
+                                <button width="35" height="30" alignment="left" title="7" id="yBw-TS-Gfb">
+                                    <connections>
+                                        <action selector="sevenBtn" destination="AgC-eL-Hgc" id="OOr-Hv-qRi"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="8" id="ofU-yz-GPA">
+                                    <connections>
+                                        <action selector="eightBtn" destination="AgC-eL-Hgc" id="guZ-Wg-xrc"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="9" id="tWA-HW-omZ">
+                                    <connections>
+                                        <action selector="nineBtn" destination="AgC-eL-Hgc" id="R3V-Ts-owg"/>
+                                    </connections>
+                                </button>
+                                <button width="30" height="30" alignment="right" title="+" id="Ko1-0r-boG">
+                                    <connections>
+                                        <action selector="plusBtn" destination="AgC-eL-Hgc" id="672-Aa-0Cw"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" id="dPP-k2-CXm">
+                            <items>
+                                <button width="35" height="30" alignment="left" title="AC" id="Qpb-yg-ku9">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                    <connections>
+                                        <action selector="clearAllBtn" destination="AgC-eL-Hgc" id="DCa-4Z-4rV"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="0" id="Osd-E2-vJ5">
+                                    <connections>
+                                        <action selector="zeroBtn" destination="AgC-eL-Hgc" id="G9x-Mq-Wc3"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="." id="UOS-QI-aXR">
+                                    <connections>
+                                        <action selector="decimalBtn" destination="AgC-eL-Hgc" id="WjV-BE-qeW"/>
+                                    </connections>
+                                </button>
+                                <button width="35" height="30" alignment="left" title="=" id="YxV-eA-LIp">
+                                    <connections>
+                                        <action selector="equalsBtn" destination="AgC-eL-Hgc" id="Obu-4P-a7W"/>
+                                    </connections>
+                                </button>
+                                <button width="30" height="30" alignment="right" title="-" id="OtL-eV-QGc">
+                                    <connections>
+                                        <action selector="minusBtn" destination="AgC-eL-Hgc" id="3hg-Bb-4Li"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="display" destination="jo5-bR-MFM" id="qBG-a6-P5K"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="24.391304347826086" y="25.803571428571431"/>
         </scene>
     </scenes>
 </document>
